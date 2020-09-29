@@ -1,4 +1,4 @@
-# TGITD_HackTues6
+# TGITD репозитория
 Официалната репозитория на отбор "TheyGlowInTheDark" за Hack TUES 6.
 
 ## Отбор
