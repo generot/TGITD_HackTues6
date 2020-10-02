@@ -24,12 +24,16 @@ public class BaseEntity
         Vector2 _pos = pos.position;
 
         if (Input.GetKey(KeyCode.A))
-            if (isGrounded) _pos.x -= distToCover;
-            else _pos.x -= distToCover * decFactor;
+            if (isGrounded) 
+                _pos.x -= distToCover;
+            else 
+                _pos.x -= distToCover * decFactor;
 
         if (Input.GetKey(KeyCode.D))
-            if (isGrounded) _pos.x += distToCover;
-            else _pos.x += distToCover * decFactor;
+            if (isGrounded) 
+                _pos.x += distToCover;
+            else 
+                _pos.x += distToCover * decFactor;
 
         return _pos;
     }
