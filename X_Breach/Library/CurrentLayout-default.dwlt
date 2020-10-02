@@ -45,10 +45,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
   controlID: 100
+=======
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 16
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +233,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 101
+=======
+  controlID: 17
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +262,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 102
+=======
+  controlID: 18
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,9 +344,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 903c0000
     m_LastClickedID: 15504
     m_ExpandedIDs: 000000007e3c0000
+=======
+    m_SelectedIDs: 823c0000
+    m_LastClickedID: 15490
+    m_ExpandedIDs: 00000000743c000000ca9a3b
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -359,7 +380,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000007e3c0000
+=======
+    m_ExpandedIDs: 00000000743c0000
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -447,7 +472,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 109
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -483,7 +508,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 5afbffff
+=======
+      m_ExpandedIDs: 4afbffff
+>>>>>>> 1b5cdd5ca7108c53ef346e860edb163d75a2c8bd
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
