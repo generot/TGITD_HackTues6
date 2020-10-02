@@ -6,11 +6,19 @@ public class pctrl : MonoBehaviour
 {
     Rigidbody2D rb;
     BaseEntity b_entity;
-
+    rcast rc;
     void Start()
     {
         b_entity = new BaseEntity();
+        rc = new rcast();
         rb = GetComponent<Rigidbody2D>();
+    }
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            rc.shoot(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        }
     }
 
     void FixedUpdate()
