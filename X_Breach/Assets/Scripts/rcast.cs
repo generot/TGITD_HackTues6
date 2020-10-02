@@ -2,22 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rcast : MonoBehaviour
+public class rcast
 {
-    
-    public int units = 30;
-    void Update()
+    public int units = 7;
+    public void shoot(Transform transform, Vector3 mousepos)
     {
-        if (Input.GetMouseButton(0))
-        {
-            shoot();
-        }
-     
-    }
-    void shoot()
-    {
-        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D col = Physics2D.Raycast(dir, new Vector2(dir.x + units, dir.y));
+        Vector2 dir = mousepos-transform.position;
+        Vector2 normalize = Vector2.ClampMagnitude(dir, 0.1f);
+        RaycastHit2D col = Physics2D.Raycast(transform.position, normalize);
         if (col) {
             Debug.Log(col.transform.name);
                 }
