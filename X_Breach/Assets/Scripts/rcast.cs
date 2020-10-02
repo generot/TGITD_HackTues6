@@ -5,7 +5,6 @@ using UnityEngine;
 public class rcast : MonoBehaviour
 {
     
-    public Transform player;
     public int units = 30;
     void Update()
     {
