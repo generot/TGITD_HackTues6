@@ -15,8 +15,27 @@ public class pctrl : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Transform>().position = b_entity.HandleMovement(transform);
-        b_entity.Jump(rb);
+        GetComponent<Transform>().position = HandleMovement(transform);
+        HandleJump(rb);
+    }
+
+    public Vector2 HandleMovement(Transform pos)
+    {
+        Vector2 _pos = pos.position;
+
+        if (Input.GetKey(KeyCode.A))
+            _pos.x = b_entity.Move("Left", pos.position.x);
+
+        if (Input.GetKey(KeyCode.D))
+            _pos.x = b_entity.Move("Right", pos.position.x);
+
+        return _pos;
+    }
+
+    public void HandleJump(Rigidbody2D _rb)
+    {
+        if (Input.GetKey(KeyCode.Space))
+            b_entity.Jump(_rb);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

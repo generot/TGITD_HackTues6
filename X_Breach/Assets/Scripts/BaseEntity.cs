@@ -19,28 +19,29 @@ public class BaseEntity
         isGrounded = false;
     }
 
-    public Vector2 HandleMovement(Transform pos)
+    public float Move(string dir, float origin)
     {
-        Vector2 _pos = pos.position;
+        if (dir == "Left")
+        {
+            if (isGrounded)
+                origin -= distToCover;
+            else
+                origin -= distToCover * decFactor;
+        } 
+        else if (dir == "Right") 
+        {
+            if (isGrounded)
+                origin += distToCover;
+            else
+                origin += distToCover * decFactor;
+        }
 
-        if (Input.GetKey(KeyCode.A))
-            if (isGrounded) 
-                _pos.x -= distToCover;
-            else 
-                _pos.x -= distToCover * decFactor;
-
-        if (Input.GetKey(KeyCode.D))
-            if (isGrounded) 
-                _pos.x += distToCover;
-            else 
-                _pos.x += distToCover * decFactor;
-
-        return _pos;
+        return origin;
     }
 
     public void Jump(Rigidbody2D _rb)
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (isGrounded)
             _rb.velocity = Vector2.up * jumpForce;
     }
 }
