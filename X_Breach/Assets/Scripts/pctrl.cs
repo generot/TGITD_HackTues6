@@ -37,7 +37,7 @@ public class pctrl : MonoBehaviour
 
     void Jump(float ds)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
             rb.velocity = Vector2.up * ds; 
     }
 
