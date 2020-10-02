@@ -9,17 +9,15 @@ public class rcast : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButton(0))
-        {
             shoot();
-        }
      
     }
     void shoot()
     {
         Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D col = Physics2D.Raycast(dir, new Vector2(dir.x + units, dir.y));
-        if (col) {
+
+        if (col)
             Debug.Log(col.transform.name);
-                }
     }
 }
