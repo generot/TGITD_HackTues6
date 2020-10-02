@@ -8,7 +8,9 @@ public class pctrl : MonoBehaviour
 
     public float distToCover = 0.08f, jumpForce = 6f, decFactor = 0.3f;
     bool isGrounded = false;
-
+    public float move = 0;
+        private Animator anim;
+  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,28 +18,56 @@ public class pctrl : MonoBehaviour
 
     void FixedUpdate()
     {
+        anim = GetComponent<Animator>();  
         HandleMovement(transform, distToCover);
         Jump(jumpForce);
+        if (move == 0)
+        {
+            anim.SetBool("IsRunning", false);
+        }
+        else
+        {
+            anim.SetBool("IsRunning", true);
+        }
+
+
+
+
+        
+
+
     }
 
     void HandleMovement(Transform pos, float ds)
     {
         Vector2 _pos = pos.position;
 
+
         if (Input.GetKey(KeyCode.A))
-            if (isGrounded) _pos.x -= ds; 
+            if (isGrounded)
+            {
+                move = -1;
+                _pos.x -= ds;
+            }
             else _pos.x -= ds * decFactor;
 
         if (Input.GetKey(KeyCode.D))
-            if (isGrounded) _pos.x += ds; 
+            if (isGrounded) {
+                move = 1;
+                _pos.x += ds; 
+            
+            
+            }
             else _pos.x += ds * decFactor;
 
+
         GetComponent<Transform>().position = _pos;
+        move = 0;
     }
 
     void Jump(float ds)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
             rb.velocity = Vector2.up * ds; 
     }
 
@@ -51,4 +81,8 @@ public class pctrl : MonoBehaviour
         if (collision.collider.tag == "Ground")
             isGrounded = false;
     }
+
+   
+
+
 }
