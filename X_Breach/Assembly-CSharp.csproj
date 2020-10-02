@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\pctrl.cs" />
+     <Compile Include="Assets\Scripts\rcast.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Emil/OneDrive/Desktop/repositories/TGITD_HackTues6/X_Breach/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
