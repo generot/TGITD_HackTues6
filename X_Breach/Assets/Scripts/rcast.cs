@@ -12,7 +12,10 @@ public class rcast
         RaycastHit2D col = Physics2D.Raycast(transform.position, normalize);
         if (col)
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 997ce01bd66e176892ae03bbee7bf13e3427cee8
             Debug.Log(col.transform.name);
         }
     }
