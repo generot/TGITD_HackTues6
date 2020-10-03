@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 1101726644}
   - component: {fileID: 1101726643}
   - component: {fileID: 1101726642}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: misc_obj (1)
   m_TagString: Moveable
   m_Icon: {fileID: 0}
@@ -568,12 +568,11 @@ GameObject:
   - component: {fileID: 1649523179}
   - component: {fileID: 1649523178}
   - component: {fileID: 1649523177}
-  - component: {fileID: 1649523176}
   - component: {fileID: 1649523175}
   - component: {fileID: 1649523183}
   - component: {fileID: 1649523182}
   - component: {fileID: 1649523181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: idle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,19 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389a7f055ca4b9247bea23bde1504bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1649523176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649523174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d42f2b1179dca46b8d3e5b1fe11465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  units: 7
 --- !u!114 &1649523177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a32064551a0e2ee42925fc78154cf25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 0
 --- !u!95 &1649523178
 Animator:
   serializedVersion: 3
@@ -908,7 +895,7 @@ GameObject:
   - component: {fileID: 1811728269}
   - component: {fileID: 1811728268}
   - component: {fileID: 1811728272}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: misc_obj
   m_TagString: Moveable
   m_Icon: {fileID: 0}

@@ -7,11 +7,14 @@ public class pctrl : MonoBehaviour
     Rigidbody2D rb;
     BaseEntity b_entity;
     rcast rc;
+    public float move = 0;
+    private Animator anim;
     void Start()
     {
         b_entity = new BaseEntity();
         rc = new rcast();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -25,6 +28,17 @@ public class pctrl : MonoBehaviour
     {
         GetComponent<Transform>().position = HandleMovement(transform);
         HandleJump(rb);
+
+        if (move == 0)
+        {
+            anim.SetBool("IsRunning", false);
+
+        }
+        else {
+            anim.SetBool("IsRunning", true);
+
+        }
+
     }
 
     public Vector2 HandleMovement(Transform pos)
@@ -32,12 +46,25 @@ public class pctrl : MonoBehaviour
         Vector2 _pos = pos.position;
 
         if (Input.GetKey(KeyCode.A))
+        {
             _pos.x = b_entity.Move("Left", pos.position.x);
-
-        if (Input.GetKey(KeyCode.D))
+            move = -1;
+        }
+        else 
+        {
+            move = 0;
+        }
+        if (Input.GetKey(KeyCode.D)) {
             _pos.x = b_entity.Move("Right", pos.position.x);
-
+            move = 1;
+        }
+        else
+        {
+            move = 0;
+        }
+        
         return _pos;
+
     }
 
     public void HandleJump(Rigidbody2D _rb)

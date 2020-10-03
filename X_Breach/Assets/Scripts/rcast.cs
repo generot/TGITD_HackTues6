@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rcast : MonoBehaviour
+public class rcast
 {
     public int units = 7;
     public void shoot(Transform transform, Vector3 mousepos)
