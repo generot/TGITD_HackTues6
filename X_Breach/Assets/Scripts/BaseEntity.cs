@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseEntity
 { 
     float distToCover, jumpForce, decFactor;
-    public int health=100;
+    public float health=100;
     int damage;
 
 
@@ -53,7 +53,7 @@ public class BaseEntity
 
     public void CauseDamage(BaseEntity other) { other.TakeDamage(damage); }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
         if (!IsDead())
             health -= dmg;

@@ -25,7 +25,7 @@ public class Combat : MonoBehaviour
             Debug.Log(Enemy.gameObject.GetComponent<LRankGuard>().b_enemy.health);
             if (Enemy.gameObject.GetComponent<LRankGuard>().b_enemy.health <= 0)
             {
-                Destroy(Enemy.gameObject, 1);
+                Destroy(Enemy.gameObject, 0);
             }
         }
     }

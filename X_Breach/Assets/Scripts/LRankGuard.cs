@@ -22,7 +22,7 @@ public class LRankGuard : MonoBehaviour
 
     void Update()
     {
-        if(b_enemy!=null)
-        transform.localPosition = b_enemy.Pathfinding(transform.localPosition, bndry);
+//if(b_enemy!=null)
+        //transform.localPosition = b_enemy.Pathfinding(transform.localPosition, bndry);
     }
 }

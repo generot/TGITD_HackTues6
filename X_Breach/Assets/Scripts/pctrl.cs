@@ -22,13 +22,7 @@ public class pctrl : MonoBehaviour
     void Start()
     {
         b_entity = new BaseEntity();
-<<<<<<< HEAD
-        //rc = new rcast();
-=======
-        rc = new rcast();
         scl = transform.localScale;
->>>>>>> 07be3779127618d55a6c0f13ea66e97f8391c290
-
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
