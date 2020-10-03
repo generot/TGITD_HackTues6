@@ -32,7 +32,13 @@ public class grav_pull : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
             for (int i = 0; i < attractableObjs.Count; i++)
-                Pull(attractableObjs[i]);
+            {
+                Vector2 distVec = attractableObjs[i].transform.position - transform.position;
+                float distSq = distVec.x * distVec.x + distVec.y * distVec.y;
+
+                if(distSq > 16f)
+                    Pull(attractableObjs[i]);
+            }
             
     }
 

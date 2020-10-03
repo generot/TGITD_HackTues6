@@ -5,8 +5,7 @@ using UnityEngine;
 enum PlayerState
 {
     Idle,
-    LeftRun,
-    RightRun
+    Running
 };
 
 public class pctrl : MonoBehaviour
@@ -18,10 +17,17 @@ public class pctrl : MonoBehaviour
     PlayerState pState;
     Animator anim;
 
+    Vector3 scl;
+
     void Start()
     {
         b_entity = new BaseEntity();
+<<<<<<< HEAD
         //rc = new rcast();
+=======
+        rc = new rcast();
+        scl = transform.localScale;
+>>>>>>> 07be3779127618d55a6c0f13ea66e97f8391c290
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -42,6 +48,7 @@ public class pctrl : MonoBehaviour
         else
             anim.SetBool("IsRunning", true);
 
+        pState = PlayerState.Idle;
     }
 
     public Vector2 HandleMovement(Transform pos)
@@ -51,15 +58,17 @@ public class pctrl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _pos.x = b_entity.Move("Left", pos.position.x);
-            pState = PlayerState.LeftRun;
+            transform.localScale = new Vector3(-scl.x, scl.y, scl.z);
+
+            pState = PlayerState.Running;
         }
-        else pState = PlayerState.Idle;
 
         if (Input.GetKey(KeyCode.D)) {
             _pos.x = b_entity.Move("Right", pos.position.x);
-            pState = PlayerState.RightRun;
+            transform.localScale = new Vector3(scl.x, scl.y, scl.z);
+
+            pState = PlayerState.Running;
         }
-        else pState = PlayerState.Idle;
         
         return _pos;
 
