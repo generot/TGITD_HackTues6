@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BaseEntity
 { 
-    float distToCover, jumpForce, decFactor;
-    int health, damage;
+    public float distToCover, jumpForce, decFactor;
+    public int health, damage;
 
     //Jumping is handled externally
     public bool isGrounded;
