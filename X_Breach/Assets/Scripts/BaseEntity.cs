@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class BaseEntity
 { 
+<<<<<<< HEAD
     public float distToCover, jumpForce, decFactor;
     public int health, damage;
+=======
+    float distToCover, jumpForce, decFactor;
+    public float health=100;
+    int damage;
+
+>>>>>>> c2a6838eb1a77520f1defb8693690a9faa0cca06
 
     //Jumping is handled externally
     public bool isGrounded;
@@ -51,7 +58,7 @@ public class BaseEntity
 
     public void CauseDamage(BaseEntity other) { other.TakeDamage(damage); }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
         if (!IsDead())
             health -= dmg;
