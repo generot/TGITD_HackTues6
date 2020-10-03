@@ -59,8 +59,10 @@
     <Compile Include="Assets\Scripts\pctrl.cs" />
     <Compile Include="Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Scripts\rcast.cs" />
+    <Compile Include="Assets\Scripts\LRankGuard.cs" />
     <Compile Include="Assets\Scripts\MoveableObj.cs" />
     <Compile Include="Assets\Scripts\BaseEntity.cs" />
+    <Compile Include="Assets\Scripts\BaseEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

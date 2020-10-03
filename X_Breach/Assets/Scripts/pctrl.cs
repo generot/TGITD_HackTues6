@@ -12,8 +12,8 @@ enum PlayerState
 public class pctrl : MonoBehaviour
 {
     Rigidbody2D rb;
-    BaseEntity b_entity;
-    rcast rc;
+    public BaseEntity b_entity;
+    //rcast rc;
 
     PlayerState pState;
     Animator anim;
@@ -21,15 +21,15 @@ public class pctrl : MonoBehaviour
     void Start()
     {
         b_entity = new BaseEntity();
-        rc = new rcast();
+        //rc = new rcast();
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        if (Input.GetMouseButton(0))
-            rc.shoot(GetComponent<Transform>(), Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //if (Input.GetMouseButton(0))
+            //rc.shoot(GetComponent<Transform>(), Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void FixedUpdate()

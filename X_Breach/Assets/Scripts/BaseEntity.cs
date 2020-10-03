@@ -5,7 +5,9 @@ using UnityEngine;
 public class BaseEntity
 { 
     float distToCover, jumpForce, decFactor;
-    int health, damage;
+    public int health=100;
+    int damage;
+
 
     //Jumping is handled externally
     public bool isGrounded;

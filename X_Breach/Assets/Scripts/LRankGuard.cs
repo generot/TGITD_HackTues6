@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LRankGuard : MonoBehaviour
 {
-    BaseEnemy b_enemy;
+    public BaseEnemy b_enemy;
     public Transform platform;
 
     EndPoints bndry;
@@ -22,6 +22,7 @@ public class LRankGuard : MonoBehaviour
 
     void Update()
     {
+        if(b_enemy!=null)
         transform.localPosition = b_enemy.Pathfinding(transform.localPosition, bndry);
     }
 }
