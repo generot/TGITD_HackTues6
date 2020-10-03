@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class rcast
 {
-    public int units = 7;
-    public void shoot(Transform transform, Vector3 mousepos)
+    public float units = 7f;
+    public void shoot(Transform transform, Vector3 mousePos)
     {
-        Vector2 dir = mousepos-transform.position;
-        Vector2 normalize = Vector2.ClampMagnitude(dir, 0.1f);
-        RaycastHit2D col = Physics2D.Raycast(transform.position, normalize);
+        Vector2 dir = mousePos-transform.position;
+       mousePos = Vector2.ClampMagnitude(dir, 1f);
+        RaycastHit2D col = Physics2D.Raycast(transform.position, mousePos, units);
         if (col) {
             Debug.Log(col.transform.name);
                 }
