@@ -2,30 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    Idle,
+    LeftRun,
+    RightRun
+};
+
 public class pctrl : MonoBehaviour
 {
     Rigidbody2D rb;
     BaseEntity b_entity;
     rcast rc;
-<<<<<<< HEAD
-    public float move = 0;
-    private Animator anim;
-=======
-    public Transform sPoint;
->>>>>>> 56bfc7e31bfe3d047e884dfd3c8e06cd2d52efe3
+
+    PlayerState pState;
+    Animator anim;
+
     void Start()
     {
         b_entity = new BaseEntity();
         rc = new rcast();
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
     void Update()
     {
         if (Input.GetMouseButton(0))
-        {
-            rc.shoot(sPoint, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        }
+            rc.shoot(GetComponent<Transform>(), Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void FixedUpdate()
@@ -33,15 +37,10 @@ public class pctrl : MonoBehaviour
         GetComponent<Transform>().position = HandleMovement(transform);
         HandleJump(rb);
 
-        if (move == 0)
-        {
+        if (pState == PlayerState.Idle)
             anim.SetBool("IsRunning", false);
-
-        }
-        else {
+        else
             anim.SetBool("IsRunning", true);
-
-        }
 
     }
 
@@ -52,20 +51,15 @@ public class pctrl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _pos.x = b_entity.Move("Left", pos.position.x);
-            move = -1;
+            pState = PlayerState.LeftRun;
         }
-        else 
-        {
-            move = 0;
-        }
+        else pState = PlayerState.Idle;
+
         if (Input.GetKey(KeyCode.D)) {
             _pos.x = b_entity.Move("Right", pos.position.x);
-            move = 1;
+            pState = PlayerState.RightRun;
         }
-        else
-        {
-            move = 0;
-        }
+        else pState = PlayerState.Idle;
         
         return _pos;
 
