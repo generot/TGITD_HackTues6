@@ -25,18 +25,20 @@ public class BaseEnemy : BaseEntity
     EnemyState eState = EnemyState.Idle;
 
     float newX = 0f;
-    int currentDir;
+    int dir, currentDir;
 
     public BaseEnemy(float sp = 0.1f, int dm = 25) : base(sp, 6, 0.3f, 100, dm) { 
         isGrounded = false;
-        currentDir = (int)Mathf.Round(Random.Range(0f, 1f));
+        
     }
 
     //Broken pathfinding
     public Vector2 Pathfinding(Vector2 pos, EndPoints boundaries)
     {
-        //if (eState != EnemyState.Walking)
-          //  currentDir = dir;
+        dir = (int)Mathf.Round(Random.Range(0f, 1f));
+
+        if (eState != EnemyState.Walking)
+            currentDir = dir;
 
         Debug.Log(newX + " " + boundaries.lEnd.x + " " + boundaries.rEnd.x);
 
@@ -70,13 +72,13 @@ public class BaseEnemy : BaseEntity
         eState = EnemyState.Idle;
         if (dir == 1)
         {
-            currentDir = 0;
-            return -.5f;
+            //currentDir = 0;
+            return -.8f;
         }
         else 
         {
-            currentDir = 1;
-            return .5f;
+            //currentDir = 1;
+            return .8f;
         }
     }
 }
