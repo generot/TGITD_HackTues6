@@ -71,7 +71,7 @@ public class pctrl : MonoBehaviour
             b_entity.Jump(_rb);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.collider.tag == "Ground")
             b_entity.isGrounded = true;
