@@ -7,8 +7,12 @@ public class pctrl : MonoBehaviour
     Rigidbody2D rb;
     BaseEntity b_entity;
     rcast rc;
+<<<<<<< HEAD
     public float move = 0;
     private Animator anim;
+=======
+    public Transform sPoint;
+>>>>>>> 56bfc7e31bfe3d047e884dfd3c8e06cd2d52efe3
     void Start()
     {
         b_entity = new BaseEntity();
@@ -20,7 +24,7 @@ public class pctrl : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            rc.shoot(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            rc.shoot(sPoint, Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
     }
 
