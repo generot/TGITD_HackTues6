@@ -28,7 +28,7 @@ public class grav_pull : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.S))
             for (int i = 0; i < attractableObjs.Count; i++)
