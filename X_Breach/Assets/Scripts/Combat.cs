@@ -22,8 +22,10 @@ public class Combat : MonoBehaviour
         foreach(Collider2D Enemy in entity_array)
         {
             Debug.Log("we hit " + Enemy);
+
             Enemy.gameObject.GetComponent<Enemy>().b_entity.TakeDamage(dmg);
             Debug.Log(Enemy.gameObject.GetComponent<Enemy>().b_entity.health);
+
             if (Enemy.gameObject.GetComponent<Enemy>().b_entity.health <= 0)
             {
                 Destroy(Enemy.gameObject, 0);

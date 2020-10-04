@@ -6,14 +6,6 @@ using UnityEditor.SceneManagement;
 
 public class ScManagement : MonoBehaviour
 {
-    List<Scene> scenes;
-
-    void Start()
-    {
-        for (int i = 0; i < SceneManager.sceneCount; i++)
-            scenes.Add(SceneManager.GetSceneAt(i));
-    }
-
     public void GameOver()
     {
         Scene gameOverScene = SceneManager.GetSceneByName("GameOver");

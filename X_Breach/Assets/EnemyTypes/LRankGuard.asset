@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   delay: 3
-  shootingDistance: 2
+  shootingDistance: 4
   health: 100
   dmg: 20

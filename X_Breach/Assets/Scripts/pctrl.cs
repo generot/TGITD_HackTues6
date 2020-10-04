@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 enum PlayerState
 {
@@ -11,12 +12,15 @@ enum PlayerState
 
 public class pctrl : MonoBehaviour
 {
-    Rigidbody2D rb;
     public BaseEntity b_entity;
 
-    PlayerState pState;
+    public Slider healthBar;
+    public Text health;
+
+    Rigidbody2D rb;
     Animator anim;
 
+    PlayerState pState;
     Vector3 scl;
 
     void Start()
@@ -28,6 +32,9 @@ public class pctrl : MonoBehaviour
     }
     void Update()
     {
+        healthBar.value = (float)b_entity.health / b_entity.maxHealth;
+        health.text = ((int)((float)b_entity.health * b_entity.maxHealth / 100)).ToString() + "%";
+
         Die();
     }
 
