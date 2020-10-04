@@ -15,10 +15,18 @@ public class rcast : MonoBehaviour
             StartCoroutine(shoot(sPoint, Vector2.right));
         }
     }
+<<<<<<< HEAD
     IEnumerator shoot(Transform transform, Vector2 Pos)
     { 
         RaycastHit2D enemyInf = Physics2D.Raycast(transform.position, Pos, units);
         if (enemyInf && enemyInf.collider.CompareTag("Enemy")) {
+=======
+
+    IEnumerator shoot(Transform transform, Vector2 mousePos)
+    {
+        RaycastHit2D enemyInf = Physics2D.Raycast(transform.position, mousePos, units);
+        if (enemyInf) {
+>>>>>>> 27dd9166dd36dc16fee4c57723174fe3965f92f0
             Enemy hostile = enemyInf.transform.GetComponent<Enemy>();
             if (hostile != null)
             {
