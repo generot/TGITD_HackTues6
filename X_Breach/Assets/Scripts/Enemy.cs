@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     public BaseEnemy b_enemy;
     public BaseEntity b_entity;
 
-    public Transform Player;
+    public Transform player;
 
     Rigidbody2D rb;
 
@@ -19,11 +20,11 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        Vector2 distVec = Player.position - transform.position;
+        Vector2 distVec = player.position - transform.position;
         float distSq = distVec.x * distVec.x + distVec.y * distVec.y;
 
         if (distSq > 16f)
-            rb.velocity = WalkTo(transform.position, Player.position);
+            rb.velocity = WalkTo(transform.position, player.position);
     }
 
     public Vector2 WalkTo(Vector2 pos, Vector2 toWalkTo)
