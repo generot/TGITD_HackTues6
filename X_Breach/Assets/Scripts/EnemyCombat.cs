@@ -7,6 +7,7 @@ public class EnemyCombat : MonoBehaviour
     public pctrl pController;
     public LayerMask Target;
     public Transform EnemySPoint;
+
     public float range;
     public int dmg;
     void Update()
