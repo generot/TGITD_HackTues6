@@ -14,18 +14,17 @@ public class EnemyCombat : MonoBehaviour
     {
         StartCoroutine(eShoot());
     }
+
     IEnumerator eShoot()
     {
         Collider2D[] target_array = Physics2D.OverlapCircleAll(EnemySPoint.position, range, Target);
         foreach (Collider2D hit in target_array)
         {
-                Debug.Log("we hit " + hit);
+            if (hit.gameObject)
+            {
                 hit.gameObject.GetComponent<pctrl>().b_entity.TakeDamage(dmg);
-                Debug.Log(hit.gameObject.GetComponent<pctrl>().b_entity.health);
-                if (hit.gameObject.GetComponent<pctrl>().b_entity.health <= 0)
-                {
-                    Destroy(hit.gameObject, 0);
-                }
+                Debug.Log("Player has " + hit.gameObject.GetComponent<pctrl>().b_entity.health + " health");
+            }
 
             yield return 10;
         }

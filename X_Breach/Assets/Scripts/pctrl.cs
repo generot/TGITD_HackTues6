@@ -13,7 +13,6 @@ public class pctrl : MonoBehaviour
 {
     Rigidbody2D rb;
     public BaseEntity b_entity;
-    //rcast rc;
 
     PlayerState pState;
     Animator anim;
@@ -29,8 +28,7 @@ public class pctrl : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetMouseButton(0))
-            //rc.shoot(GetComponent<Transform>(), Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        Die();
     }
 
     void FixedUpdate()
@@ -87,5 +85,11 @@ public class pctrl : MonoBehaviour
     {
         if (collision.collider.tag == "Ground")
             b_entity.isGrounded = false;
+    }
+
+    void Die()
+    {
+        if (b_entity.IsDead())
+            Destroy(gameObject);
     }
 }

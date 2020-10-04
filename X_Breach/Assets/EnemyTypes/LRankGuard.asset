@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf62e37e2d2283141b502484ccca0b54, type: 3}
   m_Name: LRankGuard
   m_EditorClassIdentifier: 
-  sp: 3
+  speed: 2
+  delay: 3
+  shootingDistance: 2
   health: 100
-  dmg: 25
+  dmg: 20
