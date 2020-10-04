@@ -6,6 +6,7 @@ using UnityEditor.SceneManagement;
 
 public class ScManagement : MonoBehaviour
 {
+    public AudioSource aSrc;
     public void GameOver()
     {
         Scene gameOverScene = SceneManager.GetSceneByName("GameOver");
