@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseEnemy : BaseEntity
+[CreateAssetMenu(fileName = "BaseEnemy", menuName = "New Enemy", order = 1)]
+public class BaseEnemy : ScriptableObject
 {
-    public BaseEnemy(float sp = 3f, int dm = 25) : base(sp, 6, 0.3f, 100, dm) { 
-        isGrounded = false;
-    }
-
-    public Vector2 WalkTo(Vector2 pos, Vector2 toWalkTo)
-    {
-        return Vector2.ClampMagnitude(toWalkTo - pos, 1f) * distToCover;
-    }
+    public float sp;
+    public int health, dmg;
 }
