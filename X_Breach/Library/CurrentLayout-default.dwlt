@@ -20,7 +20,11 @@ MonoBehaviour:
     height: 997
   m_ShowMode: 4
   m_Title: Project
+<<<<<<< HEAD
   m_RootView: {fileID: 8}
+=======
+  m_RootView: {fileID: 6}
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -96,11 +100,19 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 104
 --- !u!114 &5
+=======
+  m_MinSize: {x: 676, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
+  vertical: 0
+  controlID: 15
+--- !u!114 &3
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +159,11 @@ MonoBehaviour:
     height: 561
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+<<<<<<< HEAD
   m_ActualView: {fileID: 17}
+=======
+  m_ActualView: {fileID: 14}
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
@@ -274,11 +290,19 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 40
 --- !u!114 &12
+=======
+  m_MinSize: {x: 401, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 16
+--- !u!114 &10
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,11 +323,19 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 561
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 41
 --- !u!114 &13
+=======
+  m_MinSize: {x: 401, y: 221}
+  m_MaxSize: {x: 8001, y: 4021}
+  vertical: 0
+  controlID: 17
+--- !u!114 &11
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,20 +431,29 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/images
+    - Assets/Scripts
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/images
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
   m_LastProjectPath: C:\Users\HOME\Desktop\Repositories\TGITD_HackTues6\X_Breach
+=======
+  m_LastProjectPath: C:\Users\Emil\OneDrive\Desktop\repositories\TGITD_HackTues6\X_Breach
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: a43d0000
     m_LastClickedID: 15780
+=======
+    m_SelectedIDs: b23d0000
+    m_LastClickedID: 15794
+>>>>>>> 545a3e0a6cbbbc8a2b9befcf72266bc177510da3
     m_ExpandedIDs: 000000009c3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -563,7 +604,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: c4320000
       m_LastClickedID: 0
       m_ExpandedIDs: 2cfaffff
       m_RenameOverlay:
