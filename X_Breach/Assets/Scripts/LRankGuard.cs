@@ -5,7 +5,7 @@ using UnityEngine;
 public class LRankGuard : MonoBehaviour
 {
     public BaseEnemy b_enemy;
-    public Transform platform;
+    public Transform Player;
 
     Rigidbody2D rb;
 

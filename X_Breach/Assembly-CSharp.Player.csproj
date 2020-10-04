@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\MoveableObj.cs" />
     <Compile Include="Assets\Scripts\BaseEntity.cs" />
     <Compile Include="Assets\Scripts\BaseEnemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyCombat.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

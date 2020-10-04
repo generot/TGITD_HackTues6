@@ -12,16 +12,17 @@ public class Combat : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Melee();
+           StartCoroutine (Melee());
         }
     }
-    void Melee()
+    IEnumerator Melee()
     {
         Collider2D[] entity_array = Physics2D.OverlapCircleAll(point.position, attackRange, hostile);
         foreach(Collider2D Enemy in entity_array)
         {
             Debug.Log("we hit " + Enemy);
             Enemy.gameObject.GetComponent<LRankGuard>().b_enemy.TakeDamage(dmg);
+            yield return 0;
             Debug.Log(Enemy.gameObject.GetComponent<LRankGuard>().b_enemy.health);
             if (Enemy.gameObject.GetComponent<LRankGuard>().b_enemy.health <= 0)
             {
