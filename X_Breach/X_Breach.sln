@@ -1,6 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+<<<<<<< HEAD
+=======
+=======
+Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+=======
+# Visual Studio 15
+>>>>>>> 27dd9166dd36dc16fee4c57723174fe3965f92f0
+>>>>>>> 6259e11c142302ca37edb9076e300a3b2901ff94
+>>>>>>> 035227250285d5f28aa1201875faa0b554015be9
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{72EB294F-8A72-25F9-8EAD-37A506162E12}"
 EndProject
 Global
@@ -17,4 +30,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
+=======
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E85650F-6992-4F75-B051-6BCA68942253}
+	EndGlobalSection
+>>>>>>> 035227250285d5f28aa1201875faa0b554015be9
 EndGlobal

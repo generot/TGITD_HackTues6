@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/2lv.unity
+=======
+- path: Assets/Scenes/Lev2.unity
+>>>>>>> 035227250285d5f28aa1201875faa0b554015be9
   isLoaded: 1
   isActive: 1
   isSubScene: 0
