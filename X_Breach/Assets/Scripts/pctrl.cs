@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,7 +77,10 @@ public class pctrl : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Ground")
+        Vector2 playerDir = transform.position - collision.gameObject.transform.position;
+        float dotProd = Vector2.Dot(playerDir, Vector2.up);
+
+        if (collision.collider.tag == "Ground" && Mathf.FloorToInt(dotProd) == 1)
             b_entity.isGrounded = true;
     }
     void OnCollisionExit2D(Collision2D collision)

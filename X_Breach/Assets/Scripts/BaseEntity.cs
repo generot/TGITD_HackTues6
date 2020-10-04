@@ -51,7 +51,7 @@ public class BaseEntity
 
     public void CauseDamage(BaseEntity other) { other.TakeDamage(damage); }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(int dmg)
     {
         if (!IsDead())
             health -= dmg;

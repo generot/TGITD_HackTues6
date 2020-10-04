@@ -5,7 +5,7 @@ using UnityEngine;
 public class rcast : MonoBehaviour
 {
     public float units = 7f;
-    public float damage;
+    public int damage;
     public Transform sPoint;
     private void Update()
     {
@@ -16,18 +16,19 @@ public class rcast : MonoBehaviour
     }
     IEnumerator shoot(Transform transform, Vector3 mousePos)
     {
-        Vector2 dir = mousePos-transform.position;
+        Vector2 dir = mousePos - transform.position;
         mousePos = Vector2.ClampMagnitude(dir, 1f);
 
         RaycastHit2D enemyInf = Physics2D.Raycast(transform.position, mousePos, units);
         if (enemyInf) {
-            LRankGuard hostile = enemyInf.transform.GetComponent<LRankGuard>();
+            Enemy hostile = enemyInf.transform.GetComponent<Enemy>();
             if (hostile != null)
             {
-                hostile.gameObject.GetComponent<LRankGuard>().b_enemy.TakeDamage(damage);
-                Debug.Log(hostile.gameObject.GetComponent<LRankGuard>().b_enemy.health);
+                hostile.gameObject.GetComponent<Enemy>().b_entity.TakeDamage(damage);
+                Debug.Log(hostile.gameObject.GetComponent<Enemy>().b_entity.health);
                 yield return 0; //for now because its a coroutine, but later because it will be an animation :)
-                if (hostile.gameObject.GetComponent<LRankGuard>().b_enemy.health <= 0)
+
+                if (hostile.gameObject.GetComponent<Enemy>().b_entity.health <= 0)
                 {
                     yield return 0; //same as ^
                     Destroy(hostile.gameObject, 0);
