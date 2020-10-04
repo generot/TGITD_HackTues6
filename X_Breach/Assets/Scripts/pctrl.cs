@@ -78,7 +78,7 @@ public class pctrl : MonoBehaviour
         Vector2 playerDir = transform.position - collision.gameObject.transform.position;
         float dotProd = Vector2.Dot(playerDir, Vector2.up);
 
-        if (collision.collider.tag == "Ground" && Mathf.FloorToInt(dotProd) == 1)
+        if (collision.collider.tag == "Ground" && Mathf.FloorToInt(dotProd) >= 0)
             b_entity.isGrounded = true;
     }
     void OnCollisionExit2D(Collision2D collision)
