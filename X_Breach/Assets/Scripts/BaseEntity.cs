@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseEntity
-{ 
-    float distToCover, jumpForce, decFactor;
-    public float health=100;
-    int damage;
-
+{
+    public float distToCover, jumpForce, decFactor;
+    public int health = 100, damage;
 
     //Jumping is handled externally
     public bool isGrounded;

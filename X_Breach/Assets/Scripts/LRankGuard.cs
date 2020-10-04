@@ -7,22 +7,20 @@ public class LRankGuard : MonoBehaviour
     public BaseEnemy b_enemy;
     public Transform platform;
 
-    EndPoints bndry;
+    Rigidbody2D rb;
 
     void Start()
     {
-        b_enemy = new BaseEnemy();
-        bndry = new EndPoints(
-            new Vector2(platform.position.x - platform.lossyScale.x * 4, platform.position.y),
-            new Vector2(platform.position.x + platform.lossyScale.x * 4, platform.position.y)
-        );
-
-        //print(platform.localPosition.x + " " + platform.localPosition.y);
+        b_enemy = new BaseEnemy(); 
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-//if(b_enemy!=null)
-        //transform.localPosition = b_enemy.Pathfinding(transform.localPosition, bndry);
+        Vector2 distVec = Player.position - transform.position;
+        float distSq = distVec.x * distVec.x + distVec.y * distVec.y;
+
+        if (distSq > 16f)
+            rb.velocity = b_enemy.WalkTo(transform.position, Player.position);
     }
 }
