@@ -14,7 +14,7 @@ public class rcast : MonoBehaviour
             StartCoroutine (shoot(sPoint, Camera.main.ScreenToWorldPoint(Input.mousePosition)));
         }
     }
-    IEnumerator shoot(Transform transform, Vector3 mousePos)
+    public IEnumerator shoot(Transform transform, Vector3 mousePos)
     {
         Vector2 dir = mousePos - transform.position;
         mousePos = Vector2.ClampMagnitude(dir, 1f);
